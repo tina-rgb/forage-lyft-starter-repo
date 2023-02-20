@@ -8,7 +8,4 @@ class Car(Serviceable):
 
     # overriding abstract method
     def needs_service(self):
-        if self.engine.needs_service() or self.battery.needs_service():
-            return True
-        else:
-            return False
+        return self.engine.needs_service() or self.battery.needs_service()
