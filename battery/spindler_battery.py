@@ -1,4 +1,3 @@
-from datetime import date
 from battery.battery import Battery
 
 class SpindlerBattery(Battery):
@@ -9,10 +8,7 @@ class SpindlerBattery(Battery):
         
     # overriding abstract method
     def needs_service(self):
-        
-        # update current date
-        self.current_date = date.today()
-
+       
         # check if service threshold date reached
         service_threshold_date = self.last_service_date.replace(year=self.last_service_date.year + 3)
         if service_threshold_date < self.current_date:
