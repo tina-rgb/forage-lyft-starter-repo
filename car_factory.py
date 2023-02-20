@@ -10,6 +10,7 @@ from car import Car
 
 class CarFactory:
 
+    @staticmethod
     def create_calliope(current_date, last_service_date, current_mileage, last_service_mileage):
         # create engine
         engine = CapuletEngine(current_mileage, last_service_mileage)
@@ -22,6 +23,7 @@ class CarFactory:
 
         return car
 
+    @staticmethod
     def create_glissade(current_date, last_service_date, current_mileage, last_service_mileage):
         # create engine
         engine = WilloughbyEngine(current_mileage, last_service_mileage)
@@ -34,6 +36,7 @@ class CarFactory:
 
         return car
 
+    @staticmethod
     def create_palindrome(current_date, last_service_date, warning_light_on):
         # create engine
         engine = SternmanEngine(warning_light_on)
@@ -46,7 +49,7 @@ class CarFactory:
 
         return car
     
-
+    @staticmethod
     def create_roschach(current_date, last_service_date, current_mileage, last_service_mileage):
         # create engine
         engine = WilloughbyEngine(current_mileage, last_service_mileage)
@@ -58,7 +61,8 @@ class CarFactory:
         car = Car(engine, battery)
 
         return car
-
+        
+    @staticmethod
     def create_thovex(current_date, last_service_date, current_mileage, last_service_mileage):
         # create engine
         engine = CapuletEngine(current_mileage, last_service_mileage)
